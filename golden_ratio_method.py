@@ -98,12 +98,13 @@ def step3(aOld, bOld, e, R1, R2, xOld, yOld, FxOld, FyOld, n, res):
 
 
 def step4(aOld, bOld, e, R1, R2, xOld, yOld, FxOld, FyOld, n, res):
+    global responce
     a = xOld
     b = bOld
     delt = round(b - a, 3)
     res = res + f"<b><i>{n}.5</i></b>\na=<b>{a}</b>\nb=<b>{b}</b>\nD={b}-{a}=<b>{delt}</b>\n"
     if delt < e:
-        res = res + f"<b>Ответ: X {xOld}, f(x) {solve_function(xOld)}</b>"
+        responce = res + f"<b>Ответ: X {xOld}, f(x) {solve_function(xOld)}</b>"
     else:
         x = yOld
         Fx = FyOld
